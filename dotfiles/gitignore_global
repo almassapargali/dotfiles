@@ -1,0 +1,10 @@
+/.env
+/.bundle
+.DS_Store
+xcuserdata
+*.swp
+*.swo
+build
+.rbenv-version
+.envrc
+.elixir_ls

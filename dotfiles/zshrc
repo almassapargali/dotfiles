@@ -1,0 +1,15 @@
+ZSH=$HOME/.oh-my-zsh
+
+# autocorrect is more annoying than helpful
+DISABLE_CORRECTION="true"
+
+# moving zsh settings
+ZSH_THEME="asapargali"
+GITFAST_USE_OHMYZSH_PROMPT=1
+plugins=(almas react-native history-substring-search git gitfast pod brew gem sublime bundler bower)
+
+source $ZSH/oh-my-zsh.sh
+
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+
+eval "$(direnv hook $SHELL)"

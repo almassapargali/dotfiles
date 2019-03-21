@@ -1,0 +1,17 @@
+[user]
+	email = almassapargali@gmail.com
+	name = Almas Sapargali
+[push]
+	default = simple
+[http]
+	postBuffer = 524288000
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = vim
+[gui]
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[credential]
+	helper = cache --timeout 18000
+[gui]
+	recentrepo = /Users/almassapargali/code/riptreaver

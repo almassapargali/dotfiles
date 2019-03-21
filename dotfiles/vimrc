@@ -1,0 +1,59 @@
+set nocompatible                " choose no compatibility with legacy vi
+
+"============ Configuration
+syntax enable
+set background=dark
+set encoding=utf-8
+set showcmd                     " display incomplete commands
+filetype plugin indent on       " load file type plugins + indentation
+set number                      " show numbers
+set ruler                       " show current position
+
+" use comma as <Leader> key instead of backslash
+let mapleader=","
+" use § to exit back to normal mode
+inoremap § <ESC>
+
+" Remap capital y to act more like other capital letters
+nnoremap Y y$
+
+" new vertical split
+nnoremap <leader>w <C-w>v<C-w>l
+
+"" Whitespace
+set nowrap                      " don't wrap lines
+set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
+set nojoinspaces 
+set expandtab                   " use spaces, not tabs (optional)
+set backspace=indent,eol,start  " backspace through everything in insert mode
+
+"" Searching
+set hlsearch                    " highlight matches
+set incsearch                   " incremental searching
+set showmatch
+set ignorecase                  " searches are case insensitive...
+set smartcase                   " ... unless they contain at least one capital letter
+" clear highlights
+nnoremap <leader><space> :noh<cr>
+
+"" Navigation
+" jumping between last two fails
+nnoremap <leader><leader> <c-^> 
+
+" easier navigation between split windows
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+" Better movement
+nnoremap H ^
+nnoremap L g_
+nnoremap <tab> %
+
+"" Wrapping
+set wrap
+set textwidth=79
+
+" ruby path if you are using rbenv
+let g:ruby_path = system('echo $HOME/.rbenv/shims')
